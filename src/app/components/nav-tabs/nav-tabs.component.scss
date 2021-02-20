@@ -1,0 +1,57 @@
+@import "/src/styles.scss";
+
+.nav-tab {
+    position: relative;
+    height: 71px;
+    border-top: 1px solid $primary-line-color;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    .nav-tab-item {
+        margin-top: 9px;
+        svg {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        span {
+            font-size: 12px;
+            color: $secondary-font-color;
+        }
+    }
+
+    .nav-super-tab-item {
+        svg {
+            position: relative;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        span::before {
+            content: " ";
+            top: 5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            display: block;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 0px 1px 7px 2px $primary-line-color;
+            background: #fff;
+        }
+        span::after {
+            content: " ";
+            top: 5px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            display: block;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: $primary-color;
+        }
+    }
+}

@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #f9db61;
+$primary-font-color: #333233;
+$secondary-font-color: #969696;
+$primary-line-color: #ebebeb;
+body,
+img,
+p,
+h1,
+h2,
+h3,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei,
+        sans-serif;
+    background: #f5f5f5;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+ul,
+ol,
+dl {
+    list-style-type: none;
+    list-style: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.22em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-margin-horizonal {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-margin-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-horizonal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.no-padding-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}

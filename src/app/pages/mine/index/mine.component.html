@@ -1,0 +1,244 @@
+<div class="viewport">
+    <div class="app-user-info">
+        <div class="avatar">
+            <img src="./assets/img/coder77.jpg" alt="">
+            <span>Coder77</span>
+        </div>
+        <div class="clock-in">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rili"></use>
+            </svg>
+            <span>打卡</span>
+        </div>
+    </div>
+    <div class="app-user-count">
+        <section>
+            <span>0</span><span>已连续打卡</span>
+        </section>
+        <section>
+            <span>0</span><span>记账总天数</span>
+        </section>
+        <section>
+            <span>0</span><span>记账总笔数</span>
+        </section>
+    </div>
+
+    <div class="curve">
+
+        <app-card class="vip-register">
+            <app-card-header cardTitle="升级为VIP" cardTitleIcon="arrow-right" [cardHeaderIconTpl]="vipIconTpl"
+                [hasBody]=false>
+                <ng-template #vipIconTpl>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-guanjun"></use>
+                    </svg>
+                </ng-template>
+            </app-card-header>
+        </app-card>
+
+        <app-card class="nav-menus">
+            <app-card-body [cardBodyTpl]="navMenuTpl">
+                <ng-template #navMenuTpl>
+                    <div class="wrapper">
+                        <div class="item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-yujing"></use>
+                            </svg>
+                            <span>消息</span>
+                        </div>
+                        <div class="item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-xunzhang"></use>
+                            </svg>
+                            <span>我的徽章</span>
+                        </div>
+                        <div class="item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-biaoqian"></use>
+                            </svg>
+                            <span>我的积分</span>
+                        </div>
+                        <div class="item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-xinxi"></use>
+                            </svg>
+                            <span>邀请好友</span>
+                        </div>
+                        <div class="item">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shezhi"></use>
+                            </svg>
+                            <span>设置</span>
+                        </div>
+                    </div>
+                </ng-template>
+            </app-card-body>
+        </app-card>
+
+        <app-card class="bill-list">
+            <app-card-header cardTitle="账单" cardTitleIcon="arrow-right" [hasBody]=true
+                [cardHeaderExtraTpl]='allBillTpl'>
+                <ng-template #allBillTpl>
+                    <span class="nav-label">查看全部</span>
+                </ng-template>
+            </app-card-header>
+            <app-card-body [cardBodyTpl]="statement">
+                <ng-template #statement>
+                    <div class="wrapper">
+                        <div class="divider">
+                            <span>02</span><i>月</i>
+                        </div>
+                        <div class="category">
+                            <div>
+                                <div>收入</div>
+                                <span>0.</span><i>00</i>
+                            </div>
+                            <div>
+                                <div>支出</div>
+                                <span>0.</span><i>00</i>
+                            </div>
+                            <div>
+                                <div>结余</div>
+                                <span>0.</span><i>00</i>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </app-card-body>
+        </app-card>
+
+        <app-card class="monthly-budget">
+            <app-card-header cardTitle="02月总预算" cardTitleIcon="arrow-right" [hasBody]=true
+                [cardHeaderExtraTpl]='budgetNavLabelTpl'>
+                <ng-template #budgetNavLabelTpl>
+                    <span class="nav-label">查看全部</span>
+                </ng-template>
+            </app-card-header>
+            <app-card-body [cardBodyTpl]="budgetTpl">
+                <ng-template #budgetTpl>
+                    <div class="wrapper">
+                        <div class="pi-chart">
+                            <div class="inner-pi-chart">
+                                <div>剩余</div>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="budget-info">
+                            <div>
+                                <span>剩余预算 :</span><span>50000.00</span>
+                            </div>
+                            <div>
+                                <span>本月预算 :</span><span>50000.00</span>
+                            </div>
+                            <div>
+                                <span>本月支出 :</span><span>0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </app-card-body>
+        </app-card>
+
+        <app-card class="fortune-course">
+            <app-card-header cardTitle="财富星课堂" cardTitleIcon="arrow-right" [hasBody]=true
+                [cardHeaderExtraTpl]='courseNavLabelTpl'>
+                <ng-template #courseNavLabelTpl>
+                    <span class="nav-label">查看全部</span>
+                </ng-template>
+            </app-card-header>
+            <app-card-body [cardBodyTpl]="fortuneClassTpl">
+                <ng-template #fortuneClassTpl>
+                    <div class="wrapper">
+                        <div class="thumb">
+                            <img src="assets/img/coder77.jpg" alt="">
+                        </div>
+                        <div class="class-info">
+                            <div class="title">
+                                <h1>小白理财训练营</h1>
+                                <span>卖出理财训练第一步</span>
+                            </div>
+                            <div class="promotion">
+                                <span>共8讲</span>
+                                <div class="price">
+                                    <del>99</del>
+                                    <strong>6财富币</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </app-card-body>
+        </app-card>
+
+        <app-card class="nav-used">
+            <app-card-header cardTitle="常用功能" [hasBody]=true></app-card-header>
+            <app-card-body [cardBodyTpl]="navUserdTpl">
+                <ng-template #navUserdTpl>
+                    <div class="wrapper">
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>模拟炒股</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>省钱优惠券</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>财富星课堂</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>资产管家</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>发票助手</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>房贷计算器</span>
+                        </div>
+                        <div class="nav-used-item">
+                            <div>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-rili"></use>
+                                </svg>
+                            </div>
+                            <span>模拟炒股</span>
+                        </div>
+                    </div>
+                </ng-template>
+            </app-card-body>
+        </app-card>
+
+        <app-card>
+            <app-card-header cardTitle="设置" cardTitleIcon="arrow-right"></app-card-header>
+        </app-card>
+        <div class="empty-section"></div>
+    </div>
+</div>

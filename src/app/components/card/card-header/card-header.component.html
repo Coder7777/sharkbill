@@ -1,0 +1,31 @@
+<div class="card-header" [ngClass]="{'no-padding-bottom':hasBody}" *ngIf="cardHeaderTpl">
+    <ng-content *ngTemplateOutlet="cardHeaderTpl"></ng-content>
+</div>
+
+<div class="card-header" [ngClass]="{'no-padding-bottom':hasBody}" *ngIf="cardTitle || cardTitleIcon">
+
+    <ng-container *ngIf="cardHeaderIconTpl">
+        <div>
+            <ng-content *ngTemplateOutlet="cardHeaderIconTpl"></ng-content>
+            <span>{{cardTitle}}</span>
+        </div>
+        <ng-container *ngIf="cardHeaderExtraTpl">
+            <ng-content *ngTemplateOutlet="cardHeaderExtraTpl"></ng-content>
+        </ng-container>
+        <svg class="icon" aria-hidden="true">
+            <use attr.xlink:href="#icon-{{cardTitleIcon}}"></use>
+        </svg>
+    </ng-container>
+
+    <ng-container *ngIf="!cardHeaderIconTpl">
+        <span>{{cardTitle}}</span>
+        <div>
+            <ng-container *ngIf="cardHeaderExtraTpl">
+                <ng-content *ngTemplateOutlet="cardHeaderExtraTpl"></ng-content>
+            </ng-container>
+            <svg class="icon" aria-hidden="true">
+                <use attr.xlink:href="#icon-{{cardTitleIcon}}"></use>
+            </svg>
+        </div>
+    </ng-container>
+</div>

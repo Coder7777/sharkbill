@@ -1,0 +1,303 @@
+@import "/src/styles.scss";
+
+.nav-label {
+    font-size: 12px;
+    color: $secondary-font-color;
+}
+
+.viewport {
+    height: 760px;
+    overflow-y: scroll;
+    padding-bottom: 60px;
+}
+
+.app-user-info {
+    background-color: $primary-color;
+    width: 100%;
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .avatar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            margin: 0 11px 0 28px;
+        }
+        span {
+            color: $primary-font-color;
+            font-weight: bold;
+        }
+    }
+
+    .clock-in {
+        background: #fff;
+        border-radius: 30px;
+        font-size: 12px;
+        height: 27px;
+        line-height: 27px;
+        padding: 0 9px;
+        margin-right: 25px;
+
+        svg {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        span {
+        }
+    }
+}
+
+.app-user-count {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 38px 14px;
+    section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span:first-child {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333233;
+            margin-bottom: 12px;
+        }
+        span:nth-child(2) {
+            color: #6e643e;
+        }
+    }
+}
+
+.curve {
+    width: 100%;
+    height: 30px;
+    border-radius: 0 0 50% 50%;
+    background-color: $primary-color;
+    position: relative;
+    z-index: 0;
+    margin-top: -15px;
+}
+
+app-card {
+    position: relative;
+    z-index: 1;
+}
+
+app-card.vip-register {
+    svg:first-child {
+        font-size: 28px;
+        margin-right: 11px;
+    }
+}
+
+app-card.nav-menus {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            svg {
+                font-size: 27px;
+                margin-bottom: 7px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+app-card.bill-list {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .divider {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 56px;
+            height: 25px;
+            border-right: 1px solid #7e7e7e;
+            span {
+                font-size: 20px;
+            }
+            i {
+                font-size: 14px;
+            }
+        }
+        .category {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div {
+                color: #969696;
+                margin-right: 64px;
+                div {
+                    margin: 0 0 9px 0;
+                }
+            }
+            span {
+                font-size: 14px;
+            }
+            i {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+app-card.monthly-budget {
+    .wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .pi-chart {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            background: $primary-color;
+            > div {
+                text-align: center;
+                color: #969696;
+                > div {
+                    margin-top: 15px;
+                    margin-bottom: 11px;
+                    font-size: 13px;
+                }
+                span {
+                    color: #333233;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+
+            .inner-pi-chart {
+                width: 76px;
+                height: 76px;
+                border-radius: 50%;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background: #fff;
+            }
+        }
+        .budget-info {
+            position: absolute;
+            top: 50%;
+            right: 7px;
+            transform: translateY(-50%);
+            div:first-child {
+                padding-bottom: 4px;
+                margin-bottom: 4px;
+                border-bottom: 1px solid $primary-line-color;
+                color: $primary-font-color;
+                font-size: 14px;
+            }
+            div {
+                font-size: 12px;
+                color: $secondary-font-color;
+                margin-bottom: 3px;
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+            }
+            span:last-child {
+                margin-left: 95px;
+            }
+        }
+    }
+}
+
+app-card.fortune-course {
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .thumb {
+            height: 80px;
+            img {
+                width: 105px;
+                height: 80px;
+            }
+            margin-right: 9px;
+        }
+        .class-info {
+            width: 100%;
+            h1 {
+                font-size: 16px;
+                color: $primary-font-color;
+            }
+            span {
+                font-size: 14px;
+                color: $secondary-font-color;
+            }
+        }
+        .promotion {
+            margin-top: 19px;
+            color: $secondary-font-color;
+            font-size: 12px;
+            justify-content: space-between;
+            display: flex;
+            .price {
+                strong {
+                    font-weight: normal;
+                    color: #ed6d69;
+                    font-size: 14px;
+                    margin: 0 7px 0 3px;
+                }
+            }
+        }
+    }
+}
+
+app-card.nav-used {
+    .wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0 1px;
+        .nav-used-item {
+            flex: 0 0 25%;
+            margin: 7px 0 17px 0;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            svg {
+                font-size: 30px;
+                margin: 9px auto;
+            }
+            div {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                margin-bottom: 9px;
+                background: #f7f7f7;
+            }
+            span {
+                color: $secondary-font-color;
+            }
+        }
+    }
+}
+div.empty-section {
+    height: 1px;
+    width: 100%;
+}
